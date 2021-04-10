@@ -1,0 +1,170 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <Windows.h>//для русского языка
+#include <malloc.h> //для динамического выделения памяти
+#include <math.h>   //для математических функций
+
+int main()
+{
+SetConsoleTitle("test 2");//имя консоли
+
+SetConsoleCP(1251); //установка кодовой страницы win-cp 1251 в поток ввода
+SetConsoleOutputCP(1251);  //установка кодовой страницы win-cp 1251 в поток
+
+int **array;// исходный массив
+int **arrayRezult;// результирующий массив
+int numberOfLines = 0;//количество строк
+int numberOfColumns = 0;//количество столбцов
+int F = 0;//флаг
+int numberOfEvenNumbers = 0;//количество четных чисел
+int numberOfEvenNumbersSum = 0;//счетчик количества четных чисел
+int arrayRezultOfLines = 0;
+
+array = (int **)malloc(sizeof(int *));//выделение памяти исходному массиву
+array[0] = (int*)malloc(sizeof(int)); //
+
+arrayRezult = (int **)malloc( sizeof(int *));//выделение памяти результирующему массиву
+arrayRezult[0] = (int*)malloc(sizeof(int));  //
+
+//====================================================
+
+printf("Введите количество строк:\n");
+scanf("%d",&numberOfLines);
+
+system("cls");//очистка  консоли
+
+//====================================================
+
+
+//====================================( БЛОК ЗАПИСИ 1 СТРОКИ )
+
+printf("Введите массив:\n");
+
+    scanf("%d",&array[0][numberOfColumns]);
+    numberOfColumns++;
+    array[0] = (int *)realloc(array[0],(numberOfColumns+1)*sizeof(int));
+
+
+while( F != 1){
+
+    scanf("%d",&array[0][numberOfColumns]);
+    for(int i = 0; i < numberOfColumns; i++){
+        if(array[0][numberOfColumns] == array[0][i]){
+            F = 1;
+        }
+
+    }
+    numberOfColumns++;
+
+    array[0] = (int *)realloc(array[0],(numberOfColumns+1)*sizeof(int));
+
+}
+
+//====================================( КОНЕЦ )
+
+
+
+
+//====================================( БЛОК РАСШИРЕНИЯ МАССИВА НА КОЛИЧЕСТВО СТРОК )
+array = (int **)realloc(array,numberOfLines*sizeof(int *));
+for(int i = 1; i < numberOfLines; i++){
+array[i] = (int*)malloc(sizeof(int));
+array[i] = (int *)realloc(array[i],numberOfLines*sizeof(int));
+}
+
+//====================================( КОНЕЦ )
+
+
+
+
+//====================================( БЛОК ОСТАВШИХСЯ СТРОК )
+
+for(int i = 1; i < numberOfLines; i++){
+for(int j = 0; j < numberOfColumns; j++){
+ scanf("%d",&array[i][j]);
+}
+}
+
+//====================================( КОНЕЦ )
+
+
+
+
+//====================================================
+
+
+
+
+
+
+//====================================================
+system("cls");//очистка  консоли
+
+printf("Введите количество четных чисел:\n");
+scanf("%d",&numberOfEvenNumbers);
+
+system("cls");//очистка  консоли
+
+
+//====================================================
+arrayRezult = (int **)realloc(arrayRezult,numberOfLines*sizeof(int *));
+
+
+for(int j = 0; j < numberOfColumns; j++){
+    for(int i = 0; i < numberOfLines; i++){
+
+        if(array[i][j] % 2 == 0){
+
+          numberOfEvenNumbersSum++;
+
+        }
+
+    }
+
+    if(numberOfEvenNumbersSum >= numberOfEvenNumbers){
+
+        for(int i = 0; i < numberOfLines; i++){
+
+            arrayRezult[arrayRezultOfLines][i]=array[i][j];
+        }
+
+        arrayRezultOfLines++;
+        for(int i = 1; i < numberOfLines; i++){
+
+            arrayRezult[i] = (int*)malloc(sizeof(int));
+            arrayRezult[i] = (int *)realloc(arrayRezult[i],numberOfLines*sizeof(int));
+
+        }
+    }
+
+    numberOfEvenNumbersSum = 0;
+}
+
+
+
+
+
+
+
+
+//====================================================
+printf("Исходный массив:\n");
+
+for(int i = 0; i < numberOfLines; i++){
+for(int j = 0; j < numberOfColumns; j++){
+ printf(" %d ",array[i][j]);
+}
+printf("\n");
+}
+
+printf("Результирующий массив:\n");
+
+for(int i = 0; i < arrayRezultOfLines; i++){
+for(int j = 0; j < numberOfLines; j++){
+ printf(" %d ",arrayRezult[i][j]);
+}
+printf("\n");
+}
+
+    return 0;
+}

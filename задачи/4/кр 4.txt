@@ -1,0 +1,105 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <Windows.h>//для русского языка
+#include <malloc.h> //для динамического выделения памяти
+#include <math.h>   //для математических функций
+
+int main()
+{
+
+SetConsoleTitle("test 4");//имя консоли
+
+SetConsoleCP(1251); //установка кодовой страницы win-cp 1251 в поток ввода
+SetConsoleOutputCP(1251);  //установка кодовой страницы win-cp 1251 в поток
+
+int *array;     // массив последовательности
+int N;          // число
+int Fsimple = 0; // Флаг на повторение
+int Fdown = 0; // Флаг на убывание
+int Fup = 0;    //флаг ввода (возрастание)
+int size = 1;   // счетчик длинны массива
+int quantityReductions = 0;// количество количество участков последовательности, на которых значения вводимых чисел уменьшаются
+int quantityIncreases = 0;// количество количество участков последовательности, на которых значения вводимых чисел возрастают
+int end = 0;    // счетчик конца последовательности
+int down = 0, simple = 0; // количество участков убывания и повторения
+int lenDown =1, lenSimple = 1; // длина последовательности на убывание и повторение
+int MaxDown = 0, MaxSimple = 0; // максимальные длины убывания и повторения
+
+
+
+printf("Ввести число:\n");
+
+scanf("%d",&N);
+
+system("cls");//очистка  консоли
+
+array = (int *)malloc(sizeof(int));//выделение памяти массиву
+
+printf("Ввести последовательность:\n");
+
+scanf("%d",&array[0]);
+
+while (N != end){
+
+scanf("%d",&array[size]);
+
+
+if(array[size-1] < array[size]){
+    if(Fup == 0){
+            Fup = 1;
+            Fsimple = 0;
+            Fdown = 0;
+            end++;
+
+        }
+}
+if(array[size-1] > array[size]){
+    lenDown++;
+    if(Fdown == 0){
+        Fdown = 1;
+        Fup = 0;
+        Fsimple = 0;
+        down++;
+    }
+    if (lenDown > MaxDown){
+    MaxDown = lenDown;
+}
+    lenSimple = 0;
+}
+if(array[size-1] == array[size]){
+    lenSimple++;
+    if(Fsimple == 0){
+        Fsimple = 1;
+        Fup = 0;
+        Fdown = 0;
+        simple++;
+    }
+    if (lenSimple > MaxSimple){
+    MaxSimple = lenSimple;
+    }
+    lenDown = 0;
+
+}
+size++;
+array = (int *)realloc(array,(size)*sizeof(int));
+}
+system("cls");//очистка  консоли
+
+printf("Ваша последовательность:\n");
+for( int i = 0 ; i < size ; i++ ){
+    printf(" %d ", array[i]);
+}
+
+printf("\n");
+printf("\n");
+
+printf("Ответ:\n");
+printf(" %d %d %d %d ", down, MaxDown, simple, MaxSimple);
+
+
+
+
+    return 0;
+
+}
+

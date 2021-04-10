@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1610054064 source:c:\users\nikit\onedrive\Рабочий стол\6\6\main.c
+	<stdio.h>
+	<stdlib.h>
+	<Windows.h>
+	<malloc.h>
+	<math.h>
+

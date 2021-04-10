@@ -1,0 +1,92 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <Windows.h>//для русского языка
+#include <malloc.h>//для динамического выделения памяти
+#include <math.h>
+
+
+int main()
+{
+SetConsoleTitle("test 5");//имя консоли
+
+int *a;//массив
+int F1,F2 = 0;//флаги для записи массива и нахождения индекса минимального модуля разности соответстывенно
+int g = 0;//счетчик длинны строки
+int min = 0;//наименьший модуль разности
+int n1,n2 = 0;//доп счетчики
+int index;//текущий индекс
+int answer;//ответ
+
+a = (int *)malloc(sizeof(int));//выделение памяти массиву
+
+SetConsoleCP(1251); //установка кодовой страницы win-cp 1251 в поток ввода
+SetConsoleOutputCP(1251);  //установка кодовой страницы win-cp 1251 в поток
+
+printf("вводите последовательность\n");
+
+scanf("%d",&a[g]);
+g++;
+a = (int *)realloc(a,(g+1)*sizeof(int));
+while( F1 != 1 ){
+    scanf("%d",&a[g]);
+    for(int i = 0; i < g ; i++){
+        if( a[i] == a[g]){
+            F1 = 1;
+        }
+    }
+ g++;
+ a = (int *)realloc(a,(g+1)*sizeof(int));
+}
+
+
+system("cls");//очистка  консоли
+
+
+for(int i = 0; i < g ; i++){    //
+        if(sqrt(a[i]) > min){   // нахождение псевдоминимума
+            min = a[i];         //
+        }                       //
+    }                           //
+
+
+index = 1;
+
+while( F2 != 1 ){
+
+    for(int i = 0; i < index ; i++){
+        n1 = n1 + a[i];
+    }
+
+    for(int i = index+1; i < g ; i++){ //index+1 так как нам не нужно включать сам индекс в расчет последовательности
+        n2 = n2 + a[i];
+    }
+
+    if( sqrt(n1-n2) < min ){
+        min = sqrt(n1-n2);
+        answer = index;
+    }
+
+    if( index == g ){
+        F2 = 1;
+    }
+
+    n1=0;
+    n2=0;
+    index++;
+
+}
+
+printf("Ваша последовательность:\n");
+for(int i = 0; i < g ; i++){
+    printf(" %d ", a[i]);
+}
+
+printf("\n");
+printf("\n");
+
+printf("Ответ:  %d ", answer);
+
+printf("\n");
+
+    return 0;
+}

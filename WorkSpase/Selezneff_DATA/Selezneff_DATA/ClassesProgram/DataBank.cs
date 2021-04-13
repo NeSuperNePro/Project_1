@@ -9,5 +9,9 @@ namespace Selezneff_DATA.ClassesProgram
     static class DataBank
     {
         public static int F;
+        public static string NameUser;
+        public static string SurnameUser;
+        public static string CountryUser;
+        public static string RankUser;
     }
 }

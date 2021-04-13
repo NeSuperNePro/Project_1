@@ -19,6 +19,19 @@ namespace Selezneff_DATA
 
         private void UserControlProfile_Load(object sender, EventArgs e)
         {
+            labelNameUser.Text = ClassesProgram.DataBank.NameUser;
+            labelSurnameUser.Text = ClassesProgram.DataBank.SurnameUser;
+            labelCountryUser.Text = ClassesProgram.DataBank.CountryUser;
+            labelRankUser.Text = ClassesProgram.DataBank.RankUser;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelNameUser_Click(object sender, EventArgs e)
+        {
 
         }
     }

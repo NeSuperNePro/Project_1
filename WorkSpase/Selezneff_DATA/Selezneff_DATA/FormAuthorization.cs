@@ -77,15 +77,22 @@ namespace Selezneff_DATA
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
             MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @Log AND `password` = @Pass", db.GetConnection());
+            
             command.Parameters.Add("@Log", MySqlDbType.VarChar).Value = Login;
             command.Parameters.Add("@Pass", MySqlDbType.VarChar).Value = Password;
 
             adapter.SelectCommand = command;
             adapter.Fill(table);
 
-            if(table.Rows.Count > 0)
+            
+
+            if (table.Rows.Count > 0)
             {
                 ClassesProgram.DataBank.F = 1;
+                ClassesProgram.DataBank.NameUser = table.Rows[0][3].ToString();
+                ClassesProgram.DataBank.SurnameUser = table.Rows[0][4].ToString();
+                ClassesProgram.DataBank.CountryUser = table.Rows[0][5].ToString();
+                ClassesProgram.DataBank.RankUser = table.Rows[0][6].ToString();
             }
             else
             {

@@ -40,7 +40,7 @@
             this.userControlProgramInfo1 = new Selezneff_DATA.UseControlMain.UserControlProgramInfo();
             this.userControlTeam1 = new Selezneff_DATA.UseControl.UserControlTeam();
             this.userControlStarship1 = new Selezneff_DATA.UseControl.UserControlStarship();
-            this.userControlShop1 = new Selezneff_DATA.pr();
+            this.userControlShop1 = new Selezneff_DATA.UserControlShop();
             this.userControlProfile1 = new Selezneff_DATA.UserControlProfile();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -224,9 +224,12 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(893, 517);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Бортовой журнал";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -240,7 +243,7 @@
         private System.Windows.Forms.Button buttonShop;
         private System.Windows.Forms.Button buttonProfile;
         private System.Windows.Forms.Panel panel2;
-        private pr userControlShop1;
+        private UserControlShop userControlShop1;
         private UserControlProfile userControlProfile1;
         private System.Windows.Forms.Button buttonTeam;
         private System.Windows.Forms.Button buttonStarship;

@@ -1,0 +1,10 @@
+C:\Users\nikit\OneDrive\Рабочий стол\WorkSpase\BankRobbery\BankRobbery\bin\Debug\BankRobbery.exe.config
+C:\Users\nikit\OneDrive\Рабочий стол\WorkSpase\BankRobbery\BankRobbery\bin\Debug\BankRobbery.exe
+C:\Users\nikit\OneDrive\Рабочий стол\WorkSpase\BankRobbery\BankRobbery\bin\Debug\BankRobbery.pdb
+C:\Users\nikit\OneDrive\Рабочий стол\WorkSpase\BankRobbery\BankRobbery\obj\Debug\BankRobbery.csprojAssemblyReference.cache
+C:\Users\nikit\OneDrive\Рабочий стол\WorkSpase\BankRobbery\BankRobbery\obj\Debug\BankRobbery.Form1.resources
+C:\Users\nikit\OneDrive\Рабочий стол\WorkSpase\BankRobbery\BankRobbery\obj\Debug\BankRobbery.Properties.Resources.resources
+C:\Users\nikit\OneDrive\Рабочий стол\WorkSpase\BankRobbery\BankRobbery\obj\Debug\BankRobbery.csproj.GenerateResource.cache
+C:\Users\nikit\OneDrive\Рабочий стол\WorkSpase\BankRobbery\BankRobbery\obj\Debug\BankRobbery.csproj.CoreCompileInputs.cache
+C:\Users\nikit\OneDrive\Рабочий стол\WorkSpase\BankRobbery\BankRobbery\obj\Debug\BankRobbery.exe
+C:\Users\nikit\OneDrive\Рабочий стол\WorkSpase\BankRobbery\BankRobbery\obj\Debug\BankRobbery.pdb

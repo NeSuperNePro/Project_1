@@ -26,7 +26,8 @@ C:\Users\nikit\OneDrive\Рабочий стол\WorkSpase\Selezneff_DATA\Selezne
 C:\Users\nikit\OneDrive\Рабочий стол\WorkSpase\Selezneff_DATA\Selezneff_DATA\obj\Debug\Selezneff_DATA.FormRegister.resources
 C:\Users\nikit\OneDrive\Рабочий стол\WorkSpase\Selezneff_DATA\Selezneff_DATA\obj\Debug\Selezneff_DATA.FormMain.resources
 C:\Users\nikit\OneDrive\Рабочий стол\WorkSpase\Selezneff_DATA\Selezneff_DATA\obj\Debug\Selezneff_DATA.UserControlProfile.resources
-C:\Users\nikit\OneDrive\Рабочий стол\WorkSpase\Selezneff_DATA\Selezneff_DATA\obj\Debug\Selezneff_DATA.pr.resources
 C:\Users\nikit\OneDrive\Рабочий стол\WorkSpase\Selezneff_DATA\Selezneff_DATA\obj\Debug\Selezneff_DATA.UseControl.UserControlStarship.resources
 C:\Users\nikit\OneDrive\Рабочий стол\WorkSpase\Selezneff_DATA\Selezneff_DATA\obj\Debug\Selezneff_DATA.UseControl.UserControlTeam.resources
 C:\Users\nikit\OneDrive\Рабочий стол\WorkSpase\Selezneff_DATA\Selezneff_DATA\obj\Debug\Selezneff_DATA.UseControlMain.UserControlProgramInfo.resources
+C:\Users\nikit\OneDrive\Рабочий стол\WorkSpase\Selezneff_DATA\Selezneff_DATA\obj\Debug\Selezneff_DATA.UseControlMain.UserControlStarshipModule.resources
+C:\Users\nikit\OneDrive\Рабочий стол\WorkSpase\Selezneff_DATA\Selezneff_DATA\obj\Debug\Selezneff_DATA.UserControlShop.resources

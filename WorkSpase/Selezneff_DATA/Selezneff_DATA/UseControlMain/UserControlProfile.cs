@@ -23,6 +23,8 @@ namespace Selezneff_DATA
             labelSurnameUser.Text = ClassesProgram.DataBank.SurnameUser;
             labelCountryUser.Text = ClassesProgram.DataBank.CountryUser;
             labelRankUser.Text = ClassesProgram.DataBank.RankUser;
+            labelMoneyUser.Text = ClassesProgram.DataBank.MoneyUser + "$";
+            labelFuelUser.Text = ClassesProgram.DataBank.Fuel + "⛽";
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -31,6 +33,11 @@ namespace Selezneff_DATA
         }
 
         private void labelNameUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelMoneyUser_Click(object sender, EventArgs e)
         {
 
         }

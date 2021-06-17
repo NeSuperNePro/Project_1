@@ -52,6 +52,10 @@
   <ItemGroup>
     <Compile Include="ClassesDB\DataBase.cs" />
     <Compile Include="ClassesProgram\DataBank.cs" />
+    <Compile Include="ClassesProgram\Tree\Node.cs" />
+    <Compile Include="ClassesProgram\MyList\Item.cs" />
+    <Compile Include="ClassesProgram\MyList\MyList.cs" />
+    <Compile Include="ClassesProgram\Tree\Tree.cs" />
     <Compile Include="FormAuthorization.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,8 +80,15 @@
     <Compile Include="FormStart.Designer.cs">
       <DependentUpon>FormStart.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfaceProgram\InterfaceStarshipModule.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UseControlMain\ClassesShop\ClassShopSort.cs" />
+    <Compile Include="UseControlMain\ClassesStarshipModule\ModuleLVL_1.cs" />
+    <Compile Include="UseControlMain\ClassesStarshipModule\ModuleLVL_2.cs" />
+    <Compile Include="UseControlMain\ClassesStarshipModule\ModuleLVL_3.cs" />
+    <Compile Include="UseControlMain\ClassesStarshipModule\RepairCosts.cs" />
+    <Compile Include="UseControlMain\ClassesTeam\ClassTeamStarSchip.cs" />
     <Compile Include="UseControlMain\UserControlProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -101,6 +112,12 @@
     </Compile>
     <Compile Include="UseControlMain\UserControlStarship.Designer.cs">
       <DependentUpon>UserControlStarship.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UseControlMain\UserControlStarshipModule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UseControlMain\UserControlStarshipModule.Designer.cs">
+      <DependentUpon>UserControlStarshipModule.cs</DependentUpon>
     </Compile>
     <Compile Include="UseControlMain\UserControlTeam.cs">
       <SubType>UserControl</SubType>
@@ -141,6 +158,9 @@
     <EmbeddedResource Include="UseControlMain\UserControlStarship.resx">
       <DependentUpon>UserControlStarship.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UseControlMain\UserControlStarshipModule.resx">
+      <DependentUpon>UserControlStarshipModule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UseControlMain\UserControlTeam.resx">
       <DependentUpon>UserControlTeam.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +189,8 @@
     <Content Include="image\s2.png" />
     <Content Include="image\template.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="CustomFont\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

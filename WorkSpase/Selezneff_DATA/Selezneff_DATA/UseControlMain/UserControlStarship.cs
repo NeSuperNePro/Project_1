@@ -15,6 +15,18 @@ namespace Selezneff_DATA.UseControl
         public UserControlStarship()
         {
             InitializeComponent();
+            userControlStarshipModule1.Visible = false;
+        }
+
+        private void buttonStarshipModule_Click(object sender, EventArgs e)
+        {
+            userControlStarshipModule1.Visible = true;
+
+        }
+
+        private void userControlStarshipModule1_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

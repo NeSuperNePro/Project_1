@@ -37,6 +37,10 @@
             this.labelCountryUser = new System.Windows.Forms.Label();
             this.labelSurnameUser = new System.Windows.Forms.Label();
             this.labelNameUser = new System.Windows.Forms.Label();
+            this.labelMoney = new System.Windows.Forms.Label();
+            this.labelMoneyUser = new System.Windows.Forms.Label();
+            this.labelFuel = new System.Windows.Forms.Label();
+            this.labelFuelUser = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -172,11 +176,76 @@
             this.labelNameUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelNameUser.Click += new System.EventHandler(this.labelNameUser_Click);
             // 
+            // labelMoney
+            // 
+            this.labelMoney.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelMoney.AutoSize = true;
+            this.labelMoney.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMoney.ForeColor = System.Drawing.Color.White;
+            this.labelMoney.Location = new System.Drawing.Point(208, 261);
+            this.labelMoney.Name = "labelMoney";
+            this.labelMoney.Size = new System.Drawing.Size(93, 23);
+            this.labelMoney.TabIndex = 9;
+            this.labelMoney.Text = "Деньги :";
+            this.labelMoney.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelMoneyUser
+            // 
+            this.labelMoneyUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelMoneyUser.AutoSize = true;
+            this.labelMoneyUser.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMoneyUser.ForeColor = System.Drawing.Color.White;
+            this.labelMoneyUser.Location = new System.Drawing.Point(307, 261);
+            this.labelMoneyUser.Name = "labelMoneyUser";
+            this.labelMoneyUser.Size = new System.Drawing.Size(18, 23);
+            this.labelMoneyUser.TabIndex = 10;
+            this.labelMoneyUser.Text = "-";
+            this.labelMoneyUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelMoneyUser.Click += new System.EventHandler(this.labelMoneyUser_Click);
+            // 
+            // labelFuel
+            // 
+            this.labelFuel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelFuel.AutoSize = true;
+            this.labelFuel.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelFuel.ForeColor = System.Drawing.Color.White;
+            this.labelFuel.Location = new System.Drawing.Point(194, 284);
+            this.labelFuel.Name = "labelFuel";
+            this.labelFuel.Size = new System.Drawing.Size(107, 23);
+            this.labelFuel.TabIndex = 11;
+            this.labelFuel.Text = "Топливо :";
+            this.labelFuel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelFuelUser
+            // 
+            this.labelFuelUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelFuelUser.AutoSize = true;
+            this.labelFuelUser.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelFuelUser.ForeColor = System.Drawing.Color.White;
+            this.labelFuelUser.Location = new System.Drawing.Point(307, 284);
+            this.labelFuelUser.Name = "labelFuelUser";
+            this.labelFuelUser.Size = new System.Drawing.Size(18, 23);
+            this.labelFuelUser.TabIndex = 12;
+            this.labelFuelUser.Text = "-";
+            this.labelFuelUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // UserControlProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(38)))));
+            this.Controls.Add(this.labelFuelUser);
+            this.Controls.Add(this.labelFuel);
+            this.Controls.Add(this.labelMoneyUser);
+            this.Controls.Add(this.labelMoney);
             this.Controls.Add(this.labelNameUser);
             this.Controls.Add(this.labelSurnameUser);
             this.Controls.Add(this.labelCountryUser);
@@ -205,5 +274,9 @@
         private System.Windows.Forms.Label labelCountryUser;
         private System.Windows.Forms.Label labelSurnameUser;
         private System.Windows.Forms.Label labelNameUser;
+        private System.Windows.Forms.Label labelMoney;
+        private System.Windows.Forms.Label labelMoneyUser;
+        private System.Windows.Forms.Label labelFuel;
+        private System.Windows.Forms.Label labelFuelUser;
     }
 }

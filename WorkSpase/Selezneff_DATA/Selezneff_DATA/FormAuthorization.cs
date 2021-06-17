@@ -89,10 +89,21 @@ namespace Selezneff_DATA
             if (table.Rows.Count > 0)
             {
                 ClassesProgram.DataBank.F = 1;
+
+                ClassesProgram.DataBank.ID = table.Rows[0][0].ToString();
+
                 ClassesProgram.DataBank.NameUser = table.Rows[0][3].ToString();
                 ClassesProgram.DataBank.SurnameUser = table.Rows[0][4].ToString();
                 ClassesProgram.DataBank.CountryUser = table.Rows[0][5].ToString();
                 ClassesProgram.DataBank.RankUser = table.Rows[0][6].ToString();
+
+                ClassesProgram.DataBank.MoneyUser = table.Rows[0][7].ToString();
+
+                ClassesProgram.DataBank.StateModule_1 = table.Rows[0][8].ToString();
+                ClassesProgram.DataBank.StateModule_2 = table.Rows[0][9].ToString();
+                ClassesProgram.DataBank.StateModule_3 = table.Rows[0][10].ToString();
+
+                ClassesProgram.DataBank.Fuel = table.Rows[0][11].ToString();
             }
             else
             {
